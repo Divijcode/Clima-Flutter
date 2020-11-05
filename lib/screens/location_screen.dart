@@ -26,13 +26,7 @@ class _LocationScreenState extends State<LocationScreen> {
   String message;
   void UpdateUI(dynamic weatherdata){
     setState(() {
-        if(weatherdata==null){
-          temp=0;
-          name='Error';
-          message='';
-          weathericon='Unavailable';
-          return ;
-        }
+    
         var id = weatherdata['weather'][0]['id'];
         weathericon = weatherModel.getWeatherIcon(id);
         name = weatherdata['name'];
